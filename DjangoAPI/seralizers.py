@@ -1,4 +1,3 @@
-from rest_framework import seralizers
 from rest_framework import serializers
 from . models import house
 
