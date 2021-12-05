@@ -9,7 +9,6 @@ from rest_framework.parsers import JSONParser
 from .models import house
 from .seralizers import HouseSeralizer
 import numpy as np
-import pandas as pd
 from .apps import DjangoapiConfig
 from .forms import HouseForm
 from django.contrib import messages
@@ -40,6 +39,5 @@ def HouseDetails(request):
             Size = form.cleaned_data['Size']
             Bedrooms = form.cleaned_data['Bedrooms']
             messages.success(request, Houseprediction(Size,Bedrooms))
-
     form = HouseForm()
-    return render(request , 'houseForm/houseform.html', {'form':form})
+    return render(request , 'houseform.html', {'form':form})
