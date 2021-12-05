@@ -31,21 +31,30 @@
 
 
 <div class="container">
-  <div>
-    
     <form method='post'>
-      {% csrf_token %}
-      {{ form.as_p|linebreaks}}
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-     {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-      {% endif %}
-  </div>
+        {% csrf_token %}
+        {{ form.non_field_errors}}
+        <div class="fieldWrapper mx-1 my-1">
+            {{ form.Size.errors}}
+            <h4 class="hai4">Size of the house :</h4>
+            {{ form.Size }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.Bedrooms.errors }}
+            <h4>Number of Bedrooms :</h4>
+            {{ form.Bedrooms }}
+        </div>
+          <button type="submit" class="btn btn-primary myfieldclass active">Submit</button>
+          <div class="result">
+            {% if messages %}
+              <ul class="messages">
+                  {% for message in messages %}
+                      <h4> {{ message }} </h4>
+                  {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+    </form>   
 </div>
 
 <br>

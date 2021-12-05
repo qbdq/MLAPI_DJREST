@@ -5,16 +5,35 @@ body{
   height: 100%;
 }
 
-
-
-.container {
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.myfieldclass {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-form
+h4
 {
-  padding: 10cm;
+color: #1C1E1F;
+}
+
+
+.result
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align:center
+}
+
+.result h4
+{
+  color: darkslategrey;
 }

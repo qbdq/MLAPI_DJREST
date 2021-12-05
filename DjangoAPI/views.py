@@ -27,7 +27,7 @@ def Houseprediction(size,bedrooms):
         lin_reg_model = DjangoapiConfig.model
         House_price_prediction = lin_reg_model.predict([[Size, Bedroom]])[0][0]
         House_price_prediction = np.round(House_price_prediction, 1)
-        response_text = "Predicted Price ($): {}".format(House_price_prediction) 
+        response_text = "Estimated Predicted Price: {}$".format(str(House_price_prediction)[:str(House_price_prediction).find('.')]) 
         return response_text
     except ValueError as e:
         return Response(e.args[0], status.HTTP_400_BAD_REQUEST)
