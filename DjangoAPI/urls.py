@@ -7,7 +7,7 @@ router.register('MyAPI', HouseView)
 
 
 urlpatterns = [
-	#path('form/', views.myform, name='myform'),
+	path('form/', HouseDetails, name='HouseDetails'),
     path('api/', include(router.urls)),
     path('status/' , Houseprediction)
 ]
