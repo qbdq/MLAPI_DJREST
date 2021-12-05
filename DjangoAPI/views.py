@@ -34,3 +34,5 @@ def Houseprediction(request):
         return JsonResponse(response_text, safe=False)
     except ValueError as e:
         return Response(e.args[0], status.HTTP_400_BAD_REQUEST)
+
+
