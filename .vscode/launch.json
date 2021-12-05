@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "vscode-edge-devtools.debug",
+            "request": "attach",
+            "name": "Launch Microsoft Edge and open the Edge DevTools",
+            "url": "http://localhost:8000",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "runserver"
+            ],
+            "django": true
+        }
+
+    ]
+}
