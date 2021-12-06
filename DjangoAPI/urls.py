@@ -9,5 +9,5 @@ router.register('MyAPI', HouseView)
 urlpatterns = [
 	path('', HouseDetails, name='HouseDetails'),
     path('api/', include(router.urls)),
-#   path('status/' , Houseprediction)
+    path('status/' , Houseprediction_API)
 ]
