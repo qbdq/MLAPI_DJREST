@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g!e*_%h+e9t92@aaplx!_#(#)n_f#%e@wnph0fr3@bmrhwhd1e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'HousePrediction.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydb1',
+        'USER': 'root',
+        'PASSWORD' : 'root',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
