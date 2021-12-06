@@ -29,9 +29,23 @@ ALLOWED_HOSTS = ['nameless-brushlands-14625.herokuapp.com','127.0.0.1']
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
+STATIC_URL = '/static/'
+
+
 # Application definition
-STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -125,10 +139,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
